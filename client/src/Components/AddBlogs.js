@@ -19,7 +19,7 @@ function AddBlogs(props) {
         const user_id=props.UserId.user_id;
         const title=blog.title;
         const content=blog.content;
-        axios.post("http://localhost:3002/add_blog",{user_id:user_id,title:title,content:content}).then((res)=>
+        axios.post("https://blog-frontend-66kd.onrender.com/add_blog",{user_id:user_id,title:title,content:content}).then((res)=>
         {
             alert(res.data.msg);
         })

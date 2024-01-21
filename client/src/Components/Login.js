@@ -26,7 +26,7 @@ function Login(props) {
  
         const {email,password}=user
         const user_id=email
-        axios.post("http://localhost:3002/login",{user_id,password}).then((res)=>
+        axios.post("https://blog-frontend-66kd.onrender.com/login",{user_id,password}).then((res)=>
         {
             if(res.data.flag == "false")
             {
@@ -35,7 +35,7 @@ function Login(props) {
             else{
                 
                 props.setUserId({user_id:user_id});
-                axios.post("http://localhost:3002/show_blog",{user_id:user_id}).then((res1)=>
+                axios.post("https://blog-frontend-66kd.onrender.com/show_blog",{user_id:user_id}).then((res1)=>
                 {
                     // console.log("hello world "+JSON.stringify(res1.data));
                     props.setBlogs(res1.data);

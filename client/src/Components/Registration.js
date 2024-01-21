@@ -21,7 +21,7 @@ function Registration() {
     {
         const {name,email,phone,work,password,cpassword}=user;
         const user_id=email;
-        axios.post("http://localhost:3002/registeration",{name,user_id,phone,work,password,cpassword}).then((res)=>
+        axios.post("https://blog-frontend-66kd.onrender.com/registeration",{name,user_id,phone,work,password,cpassword}).then((res)=>
         {
            
             if(res.data.flag == "false")

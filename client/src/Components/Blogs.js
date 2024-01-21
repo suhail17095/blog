@@ -6,7 +6,7 @@ function Blogs(props) {
     function Reload() {
         const user_id = props.UserId.user_id;
 
-        axios.post("http://localhost:3002/show_blog", { user_id: user_id }).then((res1) => {
+        axios.post("https://blog-frontend-66kd.onrender.com/show_blog", { user_id: user_id }).then((res1) => {
             // console.log("hello world "+JSON.stringify(res1.data));
             props.setBlogs(res1.data);
         });
@@ -21,7 +21,7 @@ function Blogs(props) {
     }
     function del(e,title,content){
         const user_id=props.UserId.user_id;
-        axios.post("http://localhost:3002/delete_blog",{user_id:user_id,title:title,content:content}).then((res)=>
+        axios.post("https://blog-frontend-66kd.onrender.com/delete_blog",{user_id:user_id,title:title,content:content}).then((res)=>
         {
             alert(res.data.msg);
             Reload();
