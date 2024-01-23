@@ -39,7 +39,7 @@ function Blogs(props) {
                 {props.BBlogs.map((blog, index) => (
                     <div key={index} className="col-5 blog shadow bg-white-rounded">
                         <h3 className="title">{blog.title}</h3>
-                        <p className="content">{blog.content.substr(0, 200).concat("........")}</p>
+                        <p className="content">{blog.content.substr(0, 100).concat("........")}</p>
                         <button className='btn btn-primary' onClick={(e) => showblog(e, blog.title, blog.content)}>show more</button>
                         <button className="btn btn-danger ml-3" onClick={(e) => del(e, blog.title, blog.content)}>Delete</button>
                     </div>
